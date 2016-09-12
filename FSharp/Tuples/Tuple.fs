@@ -19,7 +19,7 @@ let meal2 = snd dinner
 let placings = ("Katie Ledecky", "Sarah Sjöström", "Emma McKeon", "Frederica Pellegrini")
 let (gold, silver, bronze, _) = placings
 // This is called "unpacking". The parentheses are optional. The underscore means "don't care."
-
+//_ means no interest in the following elements
 
 // Tuples are useful for gluing together values when you don't want to have to create a new
 // datatype. They have good performance in F#, but they aren't a replacement for classes.
