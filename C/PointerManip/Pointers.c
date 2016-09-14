@@ -7,13 +7,14 @@ int main() {
 	// CPU instructions to do integer arithmetic.
 
 	int *pToInt = &intValue;
+	printf("*pToInt = %d\n", *pToInt);
 
 	// pToInt contains the address of intValue, and when dereferenced, will read a 4-byte
 	// integer value from the address that it points to.
 
 	// C is very type-unsafe when it comes to pointers, and allows things like this:
 	float *pToFloat = (float*)&intValue;
-
+	
 	// pToFloat contains the address of intValue, but intValue is not a 4-byte float. When we
 	// dereference pToFloat, the computer will attempt to read a 4-byte float from the address
 	// that pToFloat points to. Since there are indeed 4 bytes there, the program won't crash...
@@ -25,6 +26,7 @@ int main() {
 	// To obtain dynamic memory, we use malloc, which requires knowing the # of bytes to allocate.
 	int *oneInt = (int*)malloc(sizeof(int));
 	// I now own this memory and can use it how I see fit.
+	//C can store values of one type in a location that was originally allocated for a different type
 	*oneInt = 100;
 	*(float*)oneInt = 3.14159;
 
