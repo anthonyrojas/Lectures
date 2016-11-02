@@ -1,7 +1,6 @@
 #include <iostream>
 #include <functional>
 #include <algorithm>
-
 #include "fClosure.h"
 
 std::function<int(int)> GetClosure();
@@ -14,12 +13,6 @@ int main() {
 	std::cout << func(10) << std::endl;
 	// But how does this really work? We know the WHAT of closures...
 	// Now for the HOW.
-
-
-
-
-
-
 
 	// To demonstrate our object closure:
 	std::function<int(int)> closure = GetFClosure();
